@@ -66,13 +66,14 @@ body{
 
 .descricao-2{
 	color: #993399;
+	text-align: center;
 }
 
 .btn{
 	border-radius: 15px;
 	text-transform: uppercase;
 	color: #fff;
-	cursor: pointer;
+	
 	font-weight: bold;
 	width: 250px;
 	align-self: center;
