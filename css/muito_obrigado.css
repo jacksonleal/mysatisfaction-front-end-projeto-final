@@ -5,12 +5,10 @@
   position: fixed;
   animation: coracao 5s linear infinite;
   margin-left: -30px;
-  /* optical correction */
 }
 
 .texto {
   margin-left: -30px;
-  /* optical correction */
 }
 
 p {

@@ -1,9 +1,4 @@
- body, div,
- h1, h2, h3, h4, h5, h6,
- p, blockquote, pre, dl, dt, dd, ol, ul, li, hr,
- fieldset, form, label, legend, th, td,
- article, aside, figure, footer, header, hgroup, menu, nav, section,
- summary, hgroup {
+ * {
 	 margin: 0;
 	 padding: 0;
 	 border: 0;
@@ -64,7 +59,7 @@ img{
 	 user-select: none;
  }
  
- @media screen and (min-width: 40em) {
+ @media screen and (min-width: 50em) {
 	 .js .menu-principal {
 		 position: relative;
 	 }
@@ -151,7 +146,7 @@ img{
 	 opacity: 1;
  }
  
- @media screen and (min-width: 40em) {
+ @media screen and (min-width: 70em) {
 	 .mask {
 		 display: none !important;
 		 opacity: 0 !important;
@@ -191,7 +186,7 @@ img{
 	 width: 100%;
  }
  
- @media screen and (min-width: 40em) {
+ @media screen and (min-width: 37em) {
 	 .menu-principal li {
 		 width: auto;
 	 }
@@ -213,9 +208,12 @@ img{
 	 background: purple;
  }
 
- @media screen and (min-width: 40em) {
+ a:hover, a:active{
+	background: rgba(0, 0, 0, 0.1); 
+ }
+
+ @media screen and (min-width: 49em) {
 	 .menu-principal a {
-		 border-left: 1px solid white;
 		 padding: 1.02em 2em;
 		 text-align: center;
 		 border-top: 0;
@@ -235,22 +233,6 @@ img{
 	 }
  }
  
- 
- /* ------------------------------------------
-	 NAV TOGGLE STYLES
- --------------------------------------------- */
- 
- @font-face {
-	 font-family: "responsivenav";
-	 src:url("../icons/responsivenav.eot");
-	 src:url("../icons/responsivenav.eot?#iefix") format("embedded-opentype"),
-		 url("../icons/responsivenav.ttf") format("truetype"),
-		 url("../icons/responsivenav.woff") format("woff"),
-		 url("../icons/responsivenav.svg#responsivenav") format("svg");
-	 font-weight: normal;
-	 font-style: normal;
- }
- 
  .nav-toggle {
 	 -webkit-font-smoothing: antialiased;
 	 -moz-osx-font-smoothing: grayscale;
@@ -264,12 +246,12 @@ img{
  }
  
  .nav-toggle:before {
-	 color: #fff; /* Edit this to change the icon color */
-	 font: normal 28px/55px "responsivenav"; /* Edit font-size (28px) to change the icon size */
+	 color: #fff;
+	 font: normal 28px/55px "responsivenav";
 	 text-transform: none;
 	 text-align: center;
 	 position: absolute;
-	 content: "\2261"; /* Hamburger icon */
+	 content: "\2261";
 	 text-indent: 0;
 	 speak: none;
 	 width: 100%;
@@ -279,7 +261,7 @@ img{
  
  .nav-toggle.ativo:before {
 	 font-size: 24px;
-	 content: "\78"; /* Close icon */
+	 content: "\78"; 
  }
 /**/
 .table_container{
@@ -315,3 +297,20 @@ textarea {
 	 margin-top: -15px;
  }
 /**/
+
+.btn-salvar{
+	background-color: #993399;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 16ex;
+}
+
+.btn-salvar:hover{
+	background-color: transparent;
+	border: solid #993399;
+	color: purple;
+}
