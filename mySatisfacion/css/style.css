@@ -1,0 +1,98 @@
+/* MENU PRINCIPAL--------------------------------------------------------------------*/
+#logoMenu{
+    border:2px solid #993399;
+}
+
+.menu-nav{
+    display: flex;
+}
+
+.menu .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #993399;
+	height: 72px;
+   
+}
+
+.menu-nav::after {	
+	content: '';
+	clear: both;
+}
+
+.menu-nav ul {
+	padding: 0;
+	margin: 0;
+    list-style: none;
+}
+
+.menu-nav ul li {
+	float: left;
+	position: relative;
+	font-family: 'Lato',sans-serif;
+}
+
+.menu-nav ul li a {
+	display: block;
+	color: rgba(255, 255, 255, .9);
+	text-decoration: none;
+	padding: 1rem 2rem;
+	border-top: 2px solid transparent;
+	border-bottom: 2px solid transparent;
+	transition: all .3s ease-in-out;
+}
+
+.menu-nav ul li a:hover,
+.menu-nav ul li a:focus {
+	background: rgba(0, 0, 0, .15);
+}
+
+.menu-nav ul li a:focus {
+	color: white;
+}
+
+.menu-nav ul li a:not(:only-child)::after {
+	padding-left: 4px;
+	content: ' ▾';
+}
+
+.menu-nav ul li ul li {
+	min-width: 190px;
+}
+
+header ul li ul li a {
+	background: transparent;
+	color: #555;
+	border-bottom: 1px solid #DDE0E7;
+}
+
+header ul li ul li a:hover,
+header ul li ul li a:focus {
+	background: #eee;
+	color: #111;
+}
+
+.dropdown {
+	display: none;
+	position: absolute;
+	background: #fff;
+	box-shadow: 0 4px 10px rgba(10, 20, 30, .4);
+}
+/*----------------------------------------------------------------------*/
+
+
+/*RODAPÉ----------------------------------------------------------------*/
+.rodape{
+	background-color:  #993399;
+	height: 80px;
+	width: 107%;
+}
+
+.descricaoRodape{
+	float: right;
+	padding: 10px;
+	color: white;
+}
+/*----------------------------------------------------------------------*/
+
