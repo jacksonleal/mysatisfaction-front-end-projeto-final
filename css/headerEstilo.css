@@ -203,8 +203,7 @@ img{
 	 float: left;
  }
  
- .menu-principal a:active,
- .menu-principal .ativo a {
+ .ativo a {
 	 background: purple;
  }
 
@@ -313,4 +312,9 @@ textarea {
 	background-color: transparent;
 	border: solid #993399;
 	color: purple;
+}
+
+.menu-item ul li a:hover,
+.menu-item ul li a:focus {
+	background: purple;
 }

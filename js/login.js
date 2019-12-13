@@ -9,4 +9,3 @@ btnLogin.addEventListener("click", function () {
 btnInscreverse.addEventListener("click", function () {
   body.className = "cadastrar-se-js";
 });
-

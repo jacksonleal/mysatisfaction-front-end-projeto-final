@@ -21,12 +21,15 @@
 			MySatisfaction
 		</a>
 		<nav class="menu-principal">
-			<ul>
-				<li class="menu-item ativo"><a href="#bem-vindo" data-scroll>Home</a></li>
-				<li class="menu-item criar"><a href="#criar-formulario" data-scroll>Criar um Formulário</a></li>
-				<li class="menu-item mForms"><a href="#meus-formularios" data-scroll>Meus Formulários</a></li>
-				<li class="menu-item relatorios"><a href="#relatorios" data-scroll>Relatórios</a></li>
-				<li class="menu-item sair"><a href="#paginaInicial">Sair</a></li>
+			<ul id="lista_menu">
+				<li class="menu-item ativo"><a href="#bem-vindo" data-scroll onclick="mostrarAtivo(this);">Home</a></li>
+				<li class="menu-item criar"><a href="#criar-formulario" data-scroll onclick="mostrarAtivo(this);">Criar um
+						Formulário</a></li>
+				<li class="menu-item mForms"><a href="#meus-formularios" data-scroll onclick="mostrarAtivo(this);">Meus
+						Formulários</a></li>
+				<li class="menu-item relatorios"><a href="#relatorios" data-scroll onclick="mostrarAtivo(this);">Relatórios</a>
+				</li>
+				<li class="menu-item sair"><a href="#paginaInicial" onclick="mostrarAtivo(this);">Sair</a></li>
 			</ul>
 		</nav>
 	</header>
