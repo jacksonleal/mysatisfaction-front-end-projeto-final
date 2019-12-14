@@ -15,3 +15,10 @@ function mostrarAtivo(tag) {
   tag.style.backgroundColor = "purple"; // altera o fundo
   tag.style.color = "#ffffff"; // altera a cor
 }
+
+function keydownFuncao() {
+  let texto = document.getElementById("texarea1").value;
+  document.getElementById("h1KeyDown").innerHTML = texto;
+}
+
+
