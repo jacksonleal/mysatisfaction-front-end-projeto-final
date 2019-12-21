@@ -8,6 +8,7 @@
 	<meta name="author" content="MySatisfaction">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="stylesheet" href="css/headerEstilo.css">
+	<link rel="stylesheet" href="css/loginEstilo.css">
 	<!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
       <link rel="stylesheet" href="css/ie.css">
@@ -53,7 +54,7 @@
 						atendimento?</label>
 					<br>
 					<textarea id="texarea1" class="msg" onkeyup="keydownFuncao()"></textarea><br>
-					<input class="btn-salvar" type="button" value="SALVAR">
+					<button id="CriadFormSalvar" class="btn btn-2">Salvar</button>
 				</fieldset>
 			</form>
 		</div>
@@ -66,7 +67,18 @@
 
 	<section id="meus-formularios">
 		<h1>Meus Formulários</h1>
-		<h3>Voçe ainda não possuí formulários</h3>
+		<div class="m-forms">
+			<div class="formEditado">
+				<span class="link" name="link">
+					<img src="img/estrela2.jpg" alt="">
+				</span>
+				<h5 class="nomeFormCliLink">
+					Ex: formulário de avaliação teste 1234
+					<button id="btnPubliqr" class="btn btn-2">Publicar Form</button>
+					<button id="btnCopiar" class="btn btn-2">Copiar Link</button>
+				</h5>
+			</div>
+		</div>
 	</section>
 
 	<section id="relatorios">

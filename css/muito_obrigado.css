@@ -153,3 +153,7 @@ p:nth-child(15) {
     opacity: 0;
   }
 }
+
+.btn-avaliar:hover{
+  transition: background-color 1.0s;
+}

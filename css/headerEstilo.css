@@ -318,3 +318,48 @@ textarea {
 .menu-item ul li a:focus {
 	background: purple;
 }
+
+body * {
+	box-sizing: border-box;
+}
+
+.m-forms{
+		height: 100%;
+    position: relative;
+		background-color: #f6f6f6;
+}
+
+.formEditado{
+	word-wrap: break-word;
+	display: flex;
+	position: relative;
+	border: 1px solid #dfdfdf;
+	background: transparent;
+	padding: 13px 26px;
+	border-radius: 10px;
+	box-sizing: border-box;
+}
+
+.nomeFormCliLink {
+	font-size: 20px;
+	line-height: 35px;
+	margin-left: 10px;
+}
+
+.link{
+	line-height: 87px;
+	position: relative;
+	width: 150px;
+	height: 150px;
+	float: left; 
+	padding: 0px 6px; 
+	font-size: 26px;
+}
+
+#btnPubliqr{
+	margin-left: 10px;
+}
+
+#btnCopiar{
+
+}
