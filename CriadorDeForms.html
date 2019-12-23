@@ -49,11 +49,14 @@
 				<fieldset>
 					<legend>Pesquisa de satisfação</legend>
 					<br>
+					<textarea id="texarea2" class="msg" onkeyup="keydownFuncao()" placeholder="Dê um Título ao Seu Formulário"
+						required></textarea><br>
+					<br>
 					<label>O que voçê gostaria de avaliar?
 						Ex: Quantas estrelas voçê dá para o nosso
 						atendimento?</label>
 					<br>
-					<textarea id="texarea1" class="msg" onkeyup="keydownFuncao()"></textarea><br>
+					<textarea id="texarea1" class="msg" onkeyup="keydownFuncao()" required></textarea><br>
 					<button id="CriadFormSalvar" class="btn btn-2">Salvar</button>
 				</fieldset>
 			</form>
@@ -82,36 +85,27 @@
 	</section>
 
 	<section id="relatorios">
-		<h1>Relatórios</h1>
-		<button class='_paisagem'>
-			Paisagem
-		</button>
-		<button class='_retrato'>
-			Retrato
-		</button>
-
-		<div class='table_container'>
-			<table border='1' class='table paisagem'>
-				<tr>
-					<td>ID</td>
-					<td>Nome</td>
-					<td>Avaliação</td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>João</td>
-					<td>2</td>
-				</tr>
-				<tr>
-					<td>2</td>
-					<td>Junior</td>
-					<td>5</td>
-				</tr>
-				<tr>
-					<td>3</td>
-					<td>Roberto moura</td>
-					<td>7</td>
-				</tr>
+		<div class="container">
+			<table class="tabela-relatorios">
+				<thead>
+					<tr>
+						<th>Código</th>
+						<th>Descrição</th>
+						<th>Avaliação</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>001</td>
+						<td>Pesquisa de satisfação 01</td>
+						<td>5 estrelas</td>
+					</tr>
+					<tr>
+						<td>002</td>
+						<td>Pesquisa de satisfação 02</td>
+						<td>1 estrela</td>
+					</tr>
+				</tbody>
 			</table>
 		</div>
 	</section>

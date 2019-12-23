@@ -281,9 +281,20 @@ img{
 		transform: rotate(0deg);
 }
 
-textarea {
+#texarea1 {
 	width: 500px;
 	height: 100px;
+	background-color: transparent;
+	font-size: 1.2em;
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	border: 1px solid black;
+	color: purple;
+ }
+
+ #texarea2 {
+	width: 500px;
+	height: 30px;
 	background-color: transparent;
 	font-size: 1.2em;
 	font-weight: bold;
@@ -362,4 +373,8 @@ body * {
 
 #btnCopiar{
 
+}
+
+.tabela-relatorios{
+	border: solid 1px;	
 }
