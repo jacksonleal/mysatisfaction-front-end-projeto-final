@@ -378,3 +378,7 @@ body * {
 .tabela-relatorios{
 	border: solid 1px;	
 }
+
+.ps{
+	margin: 0 auto;
+}
