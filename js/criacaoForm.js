@@ -1,4 +1,4 @@
-let btnLogin = document.querySelector("#lbl-avaliar");
+let btnAvaliar = document.querySelector("#lbl-avaliar");
 let body = document.querySelector("body");
 
 window.onload = function () {
@@ -36,10 +36,31 @@ window.onload = function () {
 
 };
 
+btnAvaliar.addEventListener("click", function () {
 
+  var rads = document.getElementsByName("estrelas");
+  var estrelaSelect;
+  for (var i = 0; i < rads.length; i++) {
+    if (rads[i].checked) {
+      //alert(rads[i].id + ", " + i);
+      estrelaSelect = i;
+    }
+  }
 
+  if (estrelaSelect == 0) {
+    estrelaSelect = 5;
+  } else if (estrelaSelect == 1) {
+    estrelaSelect = 4;
+  } else if (estrelaSelect == 2) {
+    estrelaSelect = 3;
+  } else if (estrelaSelect == 3) {
+    estrelaSelect = 2;
+  } else if (estrelaSelect == 4) {
+    estrelaSelect = 1;
+  }
 
-btnLogin.addEventListener("click", function () {
+  //alert(estrelaSelect + " Estrelas");
+
   body.className = "m-obg-js";
 
   setTimeout(function () {
