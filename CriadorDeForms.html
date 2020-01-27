@@ -31,13 +31,13 @@
 						Formulários</a></li>
 				<li class="menu-item relatorios"><a href="#relatorios" data-scroll onclick="mostrarAtivo(this);">Relatórios</a>
 				</li>
-				<li class="menu-item sair"><a href="principal.html" onclick="mostrarAtivo(this);">Sair</a></li>
+				<li class="menu-item sair"><a href="index.html" onclick="mostrarAtivo(this);">Sair</a></li>
 			</ul>
 		</nav>
 	</header>
 
 	<section id="bem-vindo">
-		<h1>Seja bem-vindo(a), "Nome do Cliente"</h1>
+		<h1 id="sbvnc">Seja bem-vindo(a), "Nome do Cliente"</h1>
 		<p>Crie um formulário e avalie a satisfação dos seus clientes <a href="">
 				clicando aqui</a>. Ou, use um dos nossos modelos &nbsp;<a href="">clicando&nbsp;aqui</a>.</p>
 	</section>
@@ -57,7 +57,7 @@
 						atendimento?</label>
 					<br>
 					<textarea id="texarea1" class="msg" onkeyup="keydownFuncao()" required></textarea><br>
-					<button id="CriadFormSalvar" class="btn btn-2">Salvar</button>
+					<button id="CriadFormSalvar" class="btn btn-2" onclick="myFuncSalvar()">Salvar</button>
 				</fieldset>
 			</form>
 		</div>
@@ -113,6 +113,7 @@
 
 	<script src="js/scroll.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/login.js"></script>
 </body>
 
 </html>
