@@ -23,12 +23,34 @@ body{
 }
 
 .container2{
+	max-width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 20vh;
 	background-color: #ecf0f1;
 }
+
+.tabela-relatorios{
+	margin-top: 5px;
+	border: 1px solid purple;
+ /* Toda a tabela com fundo creme */
+
+		background: #eee; /* Linhas com fundo cinza */
+    max-width: 100%;
+}
+
+.tabela-relatorios, th, td {
+	border: 1px solid black;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+/**/
+
+/**/
 
 .conteudo{
 	background-color: #fff;

@@ -74,7 +74,7 @@ btnAvaliar.addEventListener("click", function () {
   xhr.onload = function () {
     var users = JSON.parse(xhr.responseText);
     if (xhr.readyState == 4 && xhr.status == "201") {
-      alert("Avaliação salva");
+      //alert("Avaliação salva");
 
     } else {
       alert('Não foi possivel salvar, houve um erro');

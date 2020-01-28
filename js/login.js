@@ -16,38 +16,42 @@ btnLogin.addEventListener("click", function () {
 
 //*******************************************/ criar usuário
 function MyFucLogin() {
-  event.preventDefault();
+
 
   var userEmail = document.getElementById("emailLogin").value;
   var userPass = document.getElementById("passLogin").value;
+  if (userEmail != "" & userPass != "") {
 
-  var url = "https://mysatisfaction-project-back-en.herokuapp.com/users/login/" + userEmail + "/" + userPass;
 
-  // create an XHR object
-  const xhr = new XMLHttpRequest();
+    var url = "https://mysatisfaction-project-back-en.herokuapp.com/users/login/" + userEmail + "/" + userPass;
 
-  // listen for `load` event
-  xhr.onload = () => {
-    if (xhr.response != "[]") {
-      window.location = "CriadorDeForms.html?" + userEmail;
+    // create an XHR object
+    const xhr = new XMLHttpRequest();
 
-    } else {
-      alert("E-mail ou senha incorretos");
+    // listen for `load` event
+    xhr.onload = () => {
+      if (xhr.response != "[]") {
+        window.location = "CriadorDeForms.html?" + userEmail;
+
+      } else {
+        alert("E-mail ou senha incorretos");
+      }
+    };
+
+    // listen for `error` event
+    xhr.onerror = () => {
+      console.error('Request failed.');
     }
-  };
 
-  // listen for `error` event
-  xhr.onerror = () => {
-    console.error('Request failed.');
+    // create a `GET` request
+    xhr.open('GET', url, true);
+
+    // send request
+    xhr.send();
+
+    //fim login fun
+    event.preventDefault();
   }
-
-  // create a `GET` request
-  xhr.open('GET', url, true);
-
-  // send request
-  xhr.send();
-
-  //fim login fun
 }
 
 function inscClick() {
@@ -58,22 +62,27 @@ function inscClick() {
   var userPass = document.getElementById("userpassword").value;
   var userRole = "admin";
 
-  var url = "https://mysatisfaction-project-back-en.herokuapp.com/users/login/";
-  // Get a user
-  var xhr = new XMLHttpRequest()
-  xhr.open('GET', url + userEmail, true)
-  xhr.onload = function () {
+  if (usernAME != "" & userEmail != "" & userPass != "") {
 
-    if (xhr.response != "[]") {
-      alert('Este E-mail já está cadastrado em nosso sistema!')
-      return;
-    } else {
-      cadastradaUser(usernAME, userEmail, userPass, userRole);
+    var url = "https://mysatisfaction-project-back-en.herokuapp.com/users/login/";
+    // Get a user
+    var xhr = new XMLHttpRequest()
+    xhr.open('GET', url + userEmail, true)
+    xhr.onload = function () {
+
+      if (xhr.response != "[]") {
+        alert('Este E-mail já está cadastrado em nosso sistema!')
+        return;
+      } else {
+        cadastradaUser(usernAME, userEmail, userPass, userRole);
+      }
     }
-  }
-  xhr.send(null);
+    xhr.send(null);
 
-  //
+    //
+  } else {
+    alert('Todos os campos são obrigatorios!');
+  }
 }
 
 function cadastradaUser(usernAME, userEmail, userPass, userRole) {

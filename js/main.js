@@ -162,21 +162,24 @@ function listAvaliacoes() {
         var elemento_pai = document.getElementById("paiTbody");
         // 1. Create the button
         var tr = document.createElement("tr");
+
+
         var td = document.createElement("td");
-
         td.innerHTML = jsonResponse[i]._id;
+        var body = elemento_pai;
+        body.appendChild(tr);
+        tr.appendChild(td);
+        var td = document.createElement("td");
         td.innerHTML = jsonResponse[i].title;
+        var body = elemento_pai;
+        body.appendChild(tr);
+        tr.appendChild(td);
+        var td = document.createElement("td");
         td.innerHTML = jsonResponse[i].stars;
-
-        // 2. Append somewhere
         var body = elemento_pai;
         body.appendChild(tr);
         tr.appendChild(td);
 
-        // 3. Add event handler
-        button.addEventListener("click", function () {
-          window.location = "formDeAvaliacao.html?" + this.innerHTML;
-        });
       }
 
     } else {
