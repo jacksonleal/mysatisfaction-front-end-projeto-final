@@ -1,5 +1,6 @@
 let btnAvaliar = document.querySelector("#lbl-avaliar");
 let body = document.querySelector("body");
+let title;
 
 window.onload = function () {
   var url_atual = window.location.href;
@@ -17,7 +18,7 @@ window.onload = function () {
   xhr.onload = () => {
     if (xhr.response != "[]") {
       tapc.innerHTML = xhr.response;
-
+      title = xhr.response;
     } else {
       alert("Aogo deu errado.");
     }
@@ -58,6 +59,31 @@ btnAvaliar.addEventListener("click", function () {
   } else if (estrelaSelect == 4) {
     estrelaSelect = 1;
   }
+  //post
+  var url = "https://mysatisfaction-project-back-en.herokuapp.com/favaliacao";
+
+  var data = {};
+  data.title = title;
+  data.stars = estrelaSelect;
+
+  var json = JSON.stringify(data);
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", url, true);
+  xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+  xhr.onload = function () {
+    var users = JSON.parse(xhr.responseText);
+    if (xhr.readyState == 4 && xhr.status == "201") {
+      alert("Avaliação salva");
+
+    } else {
+      alert('Não foi possivel salvar, houve um erro');
+    }
+  }
+
+  xhr.send(json);
+
+  //post
 
   //alert(estrelaSelect + " Estrelas");
 
