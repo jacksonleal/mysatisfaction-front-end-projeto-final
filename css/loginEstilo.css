@@ -9,12 +9,24 @@ body{
 	font-family: 'Open Sans', sans-serif;
 }
 
+#listAvaliacoes{
+	text-align: center;
+}
+
 .container{
 	display: flex;
 	border: 2px solid #ccc;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
+	background-color: #ecf0f1;
+}
+
+.container2{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 20vh;
 	background-color: #ecf0f1;
 }
 

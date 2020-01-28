@@ -142,3 +142,57 @@ function keydownFuncao() {
   let texto = document.getElementById("texarea1").value;
   document.getElementById("h1KeyDown").innerHTML = texto;
 }
+
+function listAvaliacoes() {
+
+  var url = "https://mysatisfaction-project-back-en.herokuapp.com/favaliacao";
+
+  // create an XHR object
+  const xhr = new XMLHttpRequest();
+  xhr.responseType = 'text';
+  // listen for `load` event
+  xhr.onload = () => {
+    if (xhr.response != "[]") {
+
+      var jsonResponse = JSON.parse(xhr.responseText);
+      //btnPubliqr.innerHTML = jsonResponse[0].title;
+
+      for (var i = 0; i < jsonResponse.length; i++) {
+        // Buscar elemento pai
+        var elemento_pai = document.getElementById("paiTbody");
+        // 1. Create the button
+        var tr = document.createElement("tr");
+        var td = document.createElement("td");
+
+        td.innerHTML = jsonResponse[i]._id;
+        td.innerHTML = jsonResponse[i].title;
+        td.innerHTML = jsonResponse[i].stars;
+
+        // 2. Append somewhere
+        var body = elemento_pai;
+        body.appendChild(tr);
+        tr.appendChild(td);
+
+        // 3. Add event handler
+        button.addEventListener("click", function () {
+          window.location = "formDeAvaliacao.html?" + this.innerHTML;
+        });
+      }
+
+    } else {
+      alert("Houve um erro");
+    }
+  };
+
+  // listen for `error` event
+  xhr.onerror = () => {
+    console.error('Request failed.');
+  }
+
+  // create a `GET` request
+  xhr.open('GET', url, true);
+
+  // send request
+  xhr.send();
+
+}
